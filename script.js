@@ -98,3 +98,43 @@ function updateDashboard() {
 
 
 /* REPORT LIST */
+function displayReports() {
+
+    let text = search.value.toLowerCase();
+
+    let filtered = reports.filter(r =>
+        r.title.toLowerCase().includes(text) ||
+        r.location.toLowerCase().includes(text)
+    );
+
+    list.innerHTML = filtered
+        .map(createCard)
+        .join("");
+}
+
+
+/* CREATE CARD */
+
+function createCard(r) {
+
+    return `
+        <div class="card">
+
+            <div>
+                <h3>${r.title}</h3>
+                <p>${r.category} • ${r.location}</p>
+                <p>${r.description}</p>
+            </div>
+
+            <span class="status">
+                ${r.status}
+            </span>
+
+        </div>
+    `;
+}
+
+
+/* START */
+
+updateDashboard();
