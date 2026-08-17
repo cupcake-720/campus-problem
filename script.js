@@ -76,3 +76,25 @@ function addReport(event) {
 
 
 /* DASHBOARD */
+function updateDashboard() {
+
+    total.innerText = reports.length;
+
+    pending.innerText =
+        reports.filter(r => r.status === "Pending").length;
+
+    progress.innerText =
+        reports.filter(r => r.status === "In Progress").length;
+
+    resolved.innerText =
+        reports.filter(r => r.status === "Resolved").length;
+
+
+    recent.innerHTML = reports
+        .slice(0, 4)
+        .map(createCard)
+        .join("");
+}
+
+
+/* REPORT LIST */
