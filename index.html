@@ -3,9 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CampusFix</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-</body>
-</html>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-box">C</div>
+            <div>
+                <h2>CampusFix</h2>
+                <small>Campus Problem Reporter</small>
+            </div>
+        </div>
+
+        <nav>
+            <button class="nav active" onclick="showPage('dashboard', this)">
+                🏠 Dashboard
+            </button>
+
+            <button class="nav" onclick="showPage('report', this)">
+                ＋ Report Problem
+            </button>
+
+            <button class="nav" onclick="showPage('reports', this)">
+                📋 My Reports
+            </button>
+        </nav>
+
+        <div class="side-bottom">
+            <p>CampusFix</p>
+            <small>Student Portal</small>
+        </div>
+
+    </aside>
+
+
+    <main>
+
+        <!-- TOP BAR -->
+        <header>
+            <div>
+                <h1 id="pageTitle">Dashboard</h1>
+                <p id="pageText">Monitor problems reported around campus.</p>
+            </div>
+
+            <button class="top-btn" onclick="showPage('report')">
+                + Report Problem
+            </button>
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="page">
+
+            <div class="welcome">
+                <div>
+                    <h2>Good day! 👋</h2>
+                    <p>Help make your campus a better place.</p>
+                </div>
+
+                <span>CampusFix</span>
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat">
+                    <div class="icon blue">📋</div>
+                    <div>
+                        <p>Total Reports</p>
+                        <h2 id="total">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="icon orange">⏳</div>
+                    <div>
+                        <p>Pending</p>
+                        <h2 id="pending">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="icon purple">🔄</div>
+                    <div>
+                        <p>In Progress</p>
+                        <h2 id="progress">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="icon green">✓</div>
+                    <div>
+                        <p>Resolved</p>
+                        <h2 id="resolved">0</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="section-title">
+                <div>
+                    <h2>Recent Problems</h2>
+                    <p>Latest problems reported by students</p>
+                </div>
+
+                <button onclick="showPage('reports')">View All →</button>
+            </div>git
