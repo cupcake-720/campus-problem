@@ -114,3 +114,116 @@
 
                 <button onclick="showPage('reports')">View All →</button>
             </div>git
+            
+            <div id="recent"></div>
+
+        </section>
+
+
+        <!-- REPORT FORM -->
+        <section id="report" class="page">
+
+            <div class="form-box">
+
+                <div class="form-title">
+                    <h2>Report a Problem</h2>
+                    <p>Tell us about an issue that needs attention.</p>
+                </div>
+
+                <form onsubmit="addReport(event)">
+
+                    <div class="row">
+
+                        <div>
+                            <label>Problem Title</label>
+                            <input
+                                id="title"
+                                placeholder="Example: Broken classroom fan"
+                                required
+                            >
+                        </div>
+
+                        <div>
+                            <label>Location</label>
+                            <input
+                                id="location"
+                                placeholder="Example: Building A, Room 302"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <label>Category</label>
+
+                    <select id="category">
+                        <option>Classroom</option>
+                        <option>Internet / Wi-Fi</option>
+                        <option>Electricity</option>
+                        <option>Water</option>
+                        <option>Cleaning</option>
+                        <option>Security</option>
+                        <option>Other</option>
+                    </select>
+
+
+                    <label>Description</label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Describe the problem..."
+                        required
+                    ></textarea>
+
+
+                    <div class="form-buttons">
+                        <button
+                            type="button"
+                            class="cancel"
+                            onclick="showPage('dashboard')">
+                            Cancel
+                        </button>
+
+                        <button class="submit">
+                            Submit Report
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- REPORTS -->
+        <section id="reports" class="page">
+
+            <div class="section-title">
+                <div>
+                    <h2>My Reports</h2>
+                    <p>Track the problems you have reported.</p>
+                </div>
+            </div>
+
+
+            <input
+                class="search"
+                id="search"
+                placeholder="🔍 Search reports..."
+                oninput="displayReports()"
+            >
+
+
+            <div id="list"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
