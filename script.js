@@ -45,3 +45,34 @@ function showPage(page, button) {
 
 
 /* ADD REPORT */
+
+function addReport(event) {
+
+    event.preventDefault();
+
+    let report = {
+        title: title.value,
+        location: location.value,
+        category: category.value,
+        description: description.value,
+        status: "Pending"
+    };
+
+
+    reports.unshift(report);
+
+    localStorage.setItem(
+        "campusFix",
+        JSON.stringify(reports)
+    );
+
+
+    alert("Report submitted successfully!");
+
+    event.target.reset();
+
+    showPage("dashboard");
+}
+
+
+/* DASHBOARD */
