@@ -137,3 +137,144 @@ header p {
 
 
 /* WELCOME */
+.welcome {
+    background: #2563eb;
+    color: white;
+    border-radius: 13px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.welcome h2 {
+    margin-bottom: 6px;
+}
+
+.welcome p {
+    opacity: .8;
+    font-size: 14px;
+}
+
+.welcome span {
+    font-size: 28px;
+    font-weight: bold;
+    opacity: .2;
+}
+
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.stat {
+    background: white;
+    border: 1px solid #e7eaf0;
+    border-radius: 11px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue {
+    background: #eaf1ff;
+}
+
+.orange {
+    background: #fff3df;
+}
+
+.purple {
+    background: #f0eaff;
+}
+
+.green {
+    background: #e5f8ed;
+}
+
+.stat p {
+    color: #8a94a6;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.stat h2 {
+    font-size: 23px;
+}
+
+
+/* SECTION TITLE */
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: 19px;
+}
+
+.section-title p {
+    color: #8a94a6;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.section-title button {
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    cursor: pointer;
+}
+
+
+/* REPORT CARD */
+
+.card {
+    background: white;
+    border: 1px solid #e7eaf0;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.card p {
+    color: #8a94a6;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.status {
+    font-size: 11px;
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #fff3dc;
+    color: #d97706;
+}
+
